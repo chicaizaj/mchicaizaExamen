@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mchicaizaExamen.Views.Vlogin"
+             Title="Vlogin">
+    
+    <ContentPage.Resources>
+
+        <!--ESTILO EXPLICITO QUE AFECTA CON UNA KEY-->
+        <Style x:Key="estiloLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="TextColor" Value="Blue"></Setter>
+            <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        </Style>
+
+        <!--ESTILO IMPLICITO QUE AFECTA A TODOS-->
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="blue"/>
+            <Setter Property="BackgroundColor" Value="Grey"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="25">
+
+        <!-- Imagen en la parte superior -->
+        <Image 
+        Source="https://redi.cedia.edu.ec/members/UISRAEL.png" 
+        HeightRequest="200" 
+        WidthRequest="200" 
+        HorizontalOptions="Center" 
+        VerticalOptions="Center" />
+
+        <!-- Título -->
+        <Label 
+        Style="{StaticResource estiloLabel}"
+        Text="INICIO DE SESION!"
+        FontSize="24" 
+        FontAttributes="Bold"
+        HorizontalOptions="Center" 
+        VerticalOptions="Center" 
+            TextColor="Red"/>
+
+        <!-- Tabla de usuario y contraseña -->
+        <Grid>
+
+            <!-- FILAS -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                 <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+            <!-- COLUMNAS -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+                
+                </Grid.ColumnDefinitions>
+
+            <!-- Etiquetas y campos de entrada -->
+            <Label 
+            Style="{StaticResource estiloLabel}" 
+            Text="USUARIO" 
+            FontSize="18" 
+            HorizontalTextAlignment="Center" 
+            Grid.Column="0" Grid.Row="0" 
+            VerticalOptions="Center" />
+
+            <Entry 
+            x:Name="txtusuario" 
+            Placeholder="Ingrese su usuario" 
+            Grid.Column="1" Grid.Row="0" 
+            Margin="10,5"
+            HorizontalOptions="FillAndExpand" />
+
+            <Label 
+            Style="{StaticResource estiloLabel}" 
+            Text="CONTRASEÑA" 
+            FontSize="18" 
+            HorizontalTextAlignment="Center" 
+            Grid.Column="0" Grid.Row="1" 
+            VerticalOptions="Center" />
+
+            <Entry 
+            x:Name="txtcontrasena" 
+            Placeholder="Ingrese su contraseña" 
+            IsPassword="True" 
+            Grid.Column="1" Grid.Row="1" 
+            Margin="10,5"
+            HorizontalOptions="FillAndExpand" />
+
+            <Button 
+             x:Name="btniniciar" 
+             Text="Iniciar Sesion" 
+             Clicked="btniniciar_Clicked" 
+             Margin="0,10,0,0"
+             BackgroundColor="#007bff"
+             TextColor="White" 
+             CornerRadius="5"
+             Grid.Column="0" Grid.Row="2"/>
+
+            <Button 
+             x:Name="btnregistro" 
+             Text="Acerca De" 
+             Clicked="btnregistro_Clicked"
+             Margin="0,10,0,0"
+             BackgroundColor="#6c757d"
+             TextColor="White"
+             CornerRadius="5"
+             Grid.Column="1" Grid.Row="2"/>
+            </Grid>
+
+        <!-- Botones de acción -->
+       
+
+    </VerticalStackLayout>
+   </ScrollView>
+</ContentPage>

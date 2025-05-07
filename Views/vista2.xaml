@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mchicaizaExamen.Views.vista2"
+             Title="vista2">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="blue"/>
+            <Setter Property="BackgroundColor" Value="Grey"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+
+        <Label x:Name="lblUsuario" FontSize="16" TextColor="Blue" HorizontalTextAlignment="Center"/>
+        <Label Text="Ventana de Registro" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+        <Grid>
+
+            <!-- FILAS -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                
+            </Grid.RowDefinitions>
+
+            <!-- COLUMNAS -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+
+            <!-- Etiquetas y campos de entrada -->
+            <Label 
+                Style="{StaticResource estiloLabel}" 
+                Text="NOMBRE" 
+                FontSize="18" 
+                HorizontalTextAlignment="Center" 
+                Grid.Column="0" Grid.Row="0" 
+                VerticalOptions="Center" />
+
+            <Entry 
+                 x:Name="txtcontrasena" 
+                 Placeholder="Ingrese su Apellido" 
+                 
+                 Grid.Column="1" Grid.Row="1" 
+                 Margin="10,5"
+                 HorizontalOptions="FillAndExpand" />
+
+            <Label 
+                 Style="{StaticResource estiloLabel}" 
+                 Text="APELLIDO" 
+                 FontSize="18" 
+                 HorizontalTextAlignment="Center" 
+                 Grid.Column="1" Grid.Row="0" 
+                 VerticalOptions="Center" />
+
+            <Entry 
+                x:Name="txtNombre" 
+                Placeholder="Ingrese su nombre" 
+                Grid.Column="0" Grid.Row="1" 
+                Margin="10,5"
+                HorizontalOptions="FillAndExpand" />
+
+            <Label 
+                Style="{StaticResource estiloLabel}" 
+                Text="Voltiamperios" 
+                FontSize="18" 
+                HorizontalTextAlignment="Center" 
+                Grid.Column="2" Grid.Row="0" 
+                VerticalOptions="Center" />
+
+            <Picker  Grid.Column="3" Grid.Row="1" >
+                <Picker.Items>
+                    <x:String>10000</x:String>
+                    <x:String>20000</x:String>
+                </Picker.Items>
+            </Picker>
+
+           
+
+        </Grid>
+
+        <Grid >
+
+            <!-- FILAS -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+              
+                <RowDefinition Height="Auto"/>
+              
+                <RowDefinition Height="Auto"/>
+            
+                <RowDefinition Height="Auto"/>
+             
+                <RowDefinition Height="Auto"/>
+              
+            </Grid.RowDefinitions>
+
+            <!-- COLUMNAS -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <!-- Columna 1 (Etiqueta) más grande -->
+                <ColumnDefinition Width="*"/>
+                <!-- Columna 2 (Campos de Entrada) -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Fecha -->
+            <Label Text="Fecha" HorizontalTextAlignment="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="0"/>
+            <DatePicker x:Name="datePicker" Grid.Column="1" Grid.Row="0"/>
+
+            <!-- Ciudad -->
+            <Label Text="Ciudad" HorizontalTextAlignment="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="1"/>
+            <Picker x:Name="pickerCiudad" Grid.Column="1" Grid.Row="1">
+                <!-- Agregar las opciones del Picker -->
+                <Picker.Items>
+                    <x:String>QUITO</x:String>
+                    <x:String>GUAYAQUL</x:String>
+                    <x:String>CUENCA</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- Monto Inicial -->
+            <Label Text="Monto Inicial" HorizontalTextAlignment="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="2"/>
+            <Entry x:Name="entryMontoInicial" Keyboard="Numeric" Placeholder="Ingrese monto inicial" Grid.Column="1" Grid.Row="2"/>
+
+            <!-- Botón Calcular -->
+            <Button Text="Calcular Pago Mensual" Clicked="Button_Clicked" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="0" />
+
+           
+            <Entry x:Name="entryCuotaMensual" IsReadOnly="True" Placeholder="Cuota mensual" Grid.Column="1" Grid.Row="4"/>
+
+        </Grid>
+
+        <Button Text="Ver Resumen" Clicked="Button_Clicked_1" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="0" />
+    </VerticalStackLayout>
+</ContentPage>
