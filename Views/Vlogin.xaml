@@ -9,7 +9,7 @@
     <ScrollView>
         <VerticalStackLayout Spacing="20" Padding="25">
 
-        <!-- Imagen en la parte superior -->
+  
         <Image 
         Source="https://redi.cedia.edu.ec/members/UISRAEL.png" 
         HeightRequest="200" 
@@ -17,7 +17,7 @@
         HorizontalOptions="Center" 
         VerticalOptions="Center" />
 
-        <!-- Título -->
+  
         <Label 
  
         Text="INICIO DE SESION!"
