@@ -4,21 +4,7 @@
              x:Class="mchicaizaExamen.Views.Vlogin"
              Title="Vlogin">
     
-    <ContentPage.Resources>
-
-        <!--ESTILO EXPLICITO QUE AFECTA CON UNA KEY-->
-        <Style x:Key="estiloLabel" TargetType="Label">
-            <Setter Property="FontSize" Value="18"></Setter>
-            <Setter Property="TextColor" Value="Blue"></Setter>
-            <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
-        </Style>
-
-        <!--ESTILO IMPLICITO QUE AFECTA A TODOS-->
-        <Style TargetType="Button">
-            <Setter Property="TextColor" Value="blue"/>
-            <Setter Property="BackgroundColor" Value="Grey"/>
-        </Style>
-    </ContentPage.Resources>
+    
 
     <ScrollView>
         <VerticalStackLayout Spacing="20" Padding="25">
@@ -33,7 +19,7 @@
 
         <!-- Título -->
         <Label 
-        Style="{StaticResource estiloLabel}"
+ 
         Text="INICIO DE SESION!"
         FontSize="24" 
         FontAttributes="Bold"
@@ -41,26 +27,24 @@
         VerticalOptions="Center" 
             TextColor="Red"/>
 
-        <!-- Tabla de usuario y contraseña -->
+ 
         <Grid>
 
-            <!-- FILAS -->
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                  <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-            <!-- COLUMNAS -->
+      
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*" />
                 
                 </Grid.ColumnDefinitions>
 
-            <!-- Etiquetas y campos de entrada -->
             <Label 
-            Style="{StaticResource estiloLabel}" 
+    
             Text="USUARIO" 
             FontSize="18" 
             HorizontalTextAlignment="Center" 
@@ -75,7 +59,7 @@
             HorizontalOptions="FillAndExpand" />
 
             <Label 
-            Style="{StaticResource estiloLabel}" 
+    
             Text="CONTRASEÑA" 
             FontSize="18" 
             HorizontalTextAlignment="Center" 
@@ -111,9 +95,8 @@
              Grid.Column="1" Grid.Row="2"/>
             </Grid>
 
-        <!-- Botones de acción -->
-       
 
+       
     </VerticalStackLayout>
    </ScrollView>
 </ContentPage>

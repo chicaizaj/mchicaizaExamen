@@ -18,14 +18,13 @@
         <Label Text="Ventana de Registro" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
         <Grid>
 
-            <!-- FILAS -->
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 
             </Grid.RowDefinitions>
 
-            <!-- COLUMNAS -->
+      
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*" />
@@ -33,7 +32,6 @@
 
             </Grid.ColumnDefinitions>
 
-            <!-- Etiquetas y campos de entrada -->
             <Label 
                 Style="{StaticResource estiloLabel}" 
                 Text="NOMBRE" 
@@ -86,7 +84,6 @@
 
         <Grid >
 
-            <!-- FILAS -->
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
               
@@ -100,22 +97,20 @@
               
             </Grid.RowDefinitions>
 
-            <!-- COLUMNAS -->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <!-- Columna 1 (Etiqueta) más grande -->
-                <ColumnDefinition Width="*"/>
-                <!-- Columna 2 (Campos de Entrada) -->
-            </Grid.ColumnDefinitions>
 
-            <!-- Fecha -->
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+       
             <Label Text="Fecha" HorizontalTextAlignment="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="0"/>
             <DatePicker x:Name="datePicker" Grid.Column="1" Grid.Row="0"/>
 
-            <!-- Ciudad -->
+        
             <Label Text="Ciudad" HorizontalTextAlignment="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="1"/>
             <Picker x:Name="pickerCiudad" Grid.Column="1" Grid.Row="1">
-                <!-- Agregar las opciones del Picker -->
+            
                 <Picker.Items>
                     <x:String>QUITO</x:String>
                     <x:String>GUAYAQUL</x:String>
@@ -123,11 +118,10 @@
                 </Picker.Items>
             </Picker>
 
-            <!-- Monto Inicial -->
             <Label Text="Monto Inicial" HorizontalTextAlignment="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="2"/>
             <Entry x:Name="entryMontoInicial" Keyboard="Numeric" Placeholder="Ingrese monto inicial" Grid.Column="1" Grid.Row="2"/>
 
-            <!-- Botón Calcular -->
+       
             <Button Text="Calcular Pago Mensual" Clicked="Button_Clicked" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="0" />
 
            

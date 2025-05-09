@@ -5,10 +5,22 @@
              x:Class="mchicaizaExamen.App">
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
+        
+            <Color x:Key="PrimaryColor">#6200EE</Color>
+            <Color x:Key="TextColor">#6200EE</Color>
+            <Color x:Key="BackgroundColor">#121212</Color>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+
+          
+            <Style x:Key="PrimaryButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
